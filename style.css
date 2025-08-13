@@ -35,7 +35,7 @@ body {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center bottom;
   display: block;
 }
 
