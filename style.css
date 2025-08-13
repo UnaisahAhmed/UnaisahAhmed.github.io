@@ -31,10 +31,9 @@ body {
 }
 
 .profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
+  position: relative;
+  top: 4px; /* adjust this number until it looks right */
+  object-position: center 25%; /* moves the crop focus down */
 }
 
 .nav-name {
