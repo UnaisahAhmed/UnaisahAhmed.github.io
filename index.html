@@ -1,8 +1,98 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
+
 <html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unaisah Ahmed</title>
+
+  <!-- Google Fonts: Source Serif 4 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;1,8..60,300&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (LinkedIn icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
 <body>
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-    <p>hey there</p>
+
+  <nav class="navbar">
+
+    <div class="nav-left">
+      <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
+      <a href="index.html" class="nav-name">Unaisah Ahmed</a>
+
+    </div>
+
+    <div class="nav-right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/unaisahahmed/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+
+  
+  <header class="intro">
+    <p class="nameTitle">
+      <span class="name-big">Unaisah Ahmed</span>
+      I am currently a junior at Barnard College, Columbia University, 
+      studying Cognitive Science and Public Policy with a concentration in Human-Computer Interaction.
+      
+    </p> 
+    <hr class="intro-divider scroll-animate">
+  </header> 
+
+    <!-- Research Section -->
+    <section class="research">
+      <h2 class="section-title">Research</h2>
+      <div class="research-item">
+        <p class="paper-title">
+          Audience Impressions of Narrative Structures and Personal Language Style in Science Communication on Social Media
+        </p>
+        <p class="paper-authors">
+          Grace Li, YY Teng, Juna Kawai-Yue, Unaisah Ahmed, Anatta Tantiwongse, Jessica Liang, Dorothy Zhang, 
+          Kynnedy Simone Smith, Tao Long, Lydia B. Chilton
+        </p>
+        <p class="paper-status">Under submission, 2024</p>
+        <a href="LINK_TO_PAPER" target="_blank" class="paper-link">Read Paper</a>
+      </div>
+    </section>
+
+
+ 
+ 
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.4, // triggers when ~40% of the line is visible
+      }
+    );
+  
+    document.querySelectorAll(".scroll-animate").forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html> 

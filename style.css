@@ -1,0 +1,180 @@
+body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #000000;
+  background-color: white;
+  text-align: left;
+  padding: 60px 20px;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+}
+
+/* Profile section (left) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-name {
+  font-size: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Nav links (right) */
+.nav-right ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.nav-right i {
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #509aea;
+}
+
+/* === INTRO TEXT === */
+.intro p {
+  max-width: 900px;
+  margin: 60px 0 40px 40px;
+  line-height: 1.6;
+  font-size: 1.5rem;
+  text-align: left;
+} 
+
+.name-big {
+  display: block;
+  font-size: 3.0rem; /* adjust as needed */
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .nav-right ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .intro p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+} 
+.see-work {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #509aea;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.see-work a {
+  color: #509aea;
+  text-decoration: none;
+}
+
+.see-work a:hover {
+  text-decoration: underline;
+} 
+
+.scroll-animate {
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 95%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  margin: 40px auto;
+}
+
+/* When in view, animate */
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Research Section */
+.research {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: "Source Serif 4", serif;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.research-item {
+  margin-bottom: 25px;
+}
+
+.paper-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.paper-authors {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 3px;
+}
+
+.paper-status {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.paper-link {
+  font-size: 0.9rem;
+  color: #509aea;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.paper-link:hover {
+  border-color: #509aea;
+}
