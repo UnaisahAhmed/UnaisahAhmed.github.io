@@ -141,8 +141,8 @@ nav a:hover {
 }
 
 .paper-title {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 300;
   margin-bottom: 5px;
 }
 
@@ -151,6 +151,12 @@ nav a:hover {
   opacity: 0.8;
   margin-bottom: 3px;
 }
+
+.highlight-author {
+  font-weight: 900; /* slightly bolder than normal */
+  color: #11a33b;   /* subtle deep blue accent */
+}
+
 
 .paper-status {
   font-size: 0.9rem;
@@ -168,4 +174,30 @@ nav a:hover {
 
 .paper-link:hover {
   border-color: #509aea;
+}
+
+.research-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.paper-cover {
+  width: 100px; /* square size */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px; /* just slightly rounded */
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.paper-cover:hover {
+  transform: scale(1.03);
+}
+
+.section-title{
+  font-size: 1.9rem;
+  font-weight: 300;
+
 }
