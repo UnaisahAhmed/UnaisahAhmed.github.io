@@ -232,3 +232,77 @@ nav a:hover {
     text-align: center;
   }
 }
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .nav-right ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nameTitle {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .profile-pic-inline {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+
+  .name-big {
+    font-size: 2.2rem;
+    margin-left: 0;
+  }
+
+  .intro p {
+    margin: 20px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .content-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .content-details {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .content-title {
+    font-size: 1.2rem;
+  }
+}
