@@ -16,10 +16,9 @@
 </head>
 
 <body>
+  <div class="page-container">
   <nav class="navbar">
-
     <div class="nav-left">
-      <img src="visuals/uahmedimg.jpg" alt="Profile Photo" class="profile-pic" /> 
       <a href="index.html" class="nav-name">Unaisah Ahmed</a>
     </div>
 
@@ -33,42 +32,98 @@
         </li>
       </ul>
     </div>
-
   </nav>
-
 
   <header class="intro">
     <p class="nameTitle">
+      <img src="visuals/uahmedimg.jpg" alt="Profile Photo" class="profile-pic-inline" />
       <span class="name-big">Unaisah Ahmed</span>
       I am currently a junior at Barnard College, Columbia University, 
       studying Cognitive Science and Public Policy with a concentration in Human-Computer Interaction.
       
+      <div class="details">
+      Barnard College '27
+      <br>
+       Based in New York City and Metro Detroit
+       <br>
+       unaisah.ahmed@columbia.edu
+      </div>
     </p> 
+    
     <hr class="intro-divider scroll-animate">
   </header> 
 
-    <!-- Research Section -->
-    <section class="research">
-      <h2 class="section-title">Research</h2>
-      <div class="research-item">
-        <a href="visuals/CDSpaper.pdf" target="_blank">
-          <img src="visuals/CDSpaperCover.png" alt="CDS Paper Cover" class="paper-cover" />
-        </a>
-        <div class="paper-details">
-        <p class="paper-title">
+
+
+  <!-- Research Section -->
+  <section class="content-section research">
+    <h2 class="section-title">Research</h2>
+    <div class="content-item">
+      <a href="visuals/CDSpaper.pdf" target="_blank">
+        <img src="visuals/tweetorialimage.png" alt="CDS Paper Cover" class="content-image" />
+      </a>
+      <div class="content-details">
+        <p class="content-title">
           Audience Impressions of Narrative Structures and Personal Language Style in Science Communication on Social Media
         </p>
-        <p class="paper-authors">
-          Grace Li, YY Teng, Juna Kawai-Yue, <strong class="highlight-author">Unaisah Ahmed</strong>, , Anatta Tantiwongse, Jessica Liang, Dorothy Zhang, 
+        <p class="content-meta">
+          Grace Li, YY Teng, Juna Kawai-Yue, <strong class="highlight-author">Unaisah Ahmed</strong>, Anatta Tantiwongse, Jessica Liang, Dorothy Zhang, 
           Kynnedy Simone Smith, Tao Long, Lydia B. Chilton
         </p>
-        <p class="paper-status">Under submission, 2024</p>
-        <a href="visuals/CDSpaper.pdf" target="_blank" class="paper-link">Read Paper</a>
+        <p class="content-status">Under submission, 2024</p>
+        <a href="visuals/CDSpaper.pdf" target="_blank" class="content-link">Read Paper</a>
       </div>
-    </section>
+    </div>
+
+    <div class="content-item">
+      <a href="visuals/2024_SRI_Poster_Unaisah_Final.pptx.pdf" target="_blank">
+        <img src="visuals/PosterVis.png" alt="Research Poster Thumbnail" class="content-image" />
+      </a>
+      <div class="content-details">
+        <p class="content-title">
+          Tweetorial Narratives
+        </p>
+        <p class="content-status">Presented at Barnard Summer Research Institute Poster Session, August 2024</p>
+        <a href="visuals/2024_SRI_Poster_Unaisah_Final.pptx.pdf" target="_blank" class="content-link">View Poster</a>
+      </div>
+    </div>
+
+  </section>
+  <hr class="intro-divider scroll-animate">
 
 
- 
+
+  <!-- Projects Section -->
+  <section class="content-section projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="content-item">
+      <a href="https://github.com/anumahmad/coms4170_ui_design_final" target="_blank">
+        <img src="visuals/offsideRuleVis.png" alt="Learn the Offside Rule Thumbnail" class="content-image">
+      </a>
+      <div class="content-details">
+        <p class="content-title">Is It Offside?</p>
+        <p class="content-meta">
+          A web-based interactive tutorial to help users understand and practice the offside rule in soccer with visualizations and quizzes.
+        </p>
+        <a href="https://github.com/anumahmad/coms4170_ui_design_final" target="_blank" class="content-link">View Project</a>
+      </div>
+    </div>
+
+    <div class="content-item">
+      <a href="https://github.com/UnaisahAhmed/museumsearch" target="_blank">
+        <img src="visuals/MuseumVis.png" alt="NYC Museum Search Tool Thumbnail" class="content-image">
+      </a>
+      <div class="content-details">
+        <p class="content-title">NYC Museum Search Tool</p>
+        <p class="content-meta">
+          A museum recommendation tool for students, highlighting museums with free access.
+        </p>
+        <a href="https://github.com/UnaisahAhmed/museumsearch" target="_blank" class="content-link">View Project</a>
+      </div>
+    </div>
+  </section>
+
   <script>
     const observer = new IntersectionObserver(
       (entries) => {
@@ -81,7 +136,7 @@
         });
       },
       {
-        threshold: 0.4, // triggers when ~40% of the line is visible
+        threshold: 0.4,
       }
     );
   
@@ -89,5 +144,6 @@
       observer.observe(el);
     });
   </script>
+</div>
 </body>
-</html> 
+</html>

@@ -15,29 +15,43 @@ body {
   padding: 60px 20px;
 }
 
+.page-container {
+  max-width: 1200px;  /* limits how wide the content gets */
+  margin: 0 auto;     /* centers the container horizontally */
+  padding-left: 20px; /* extra padding inside container */
+  padding-right: 20px;
+}
+
 /* === NAVBAR === */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 1px 50px;
 }
 
-/* Profile section (left) */
 .nav-left {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.profile-pic {
-  width: 60px; 
-  height: 60px;
+.profile-pic-inline {
+  width: 130px; 
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center bottom;
   display: block;
 }
+
+.nameTitle {
+  display: flex;
+  align-items: center; /* vertically aligns image and text */
+  gap: 15px;           /* space between image and name */
+  flex-wrap: wrap;      /* text wraps if too long */
+}
+
 
 .nav-name {
   font-size: 20px;
@@ -45,7 +59,6 @@ body {
   color: #000000;
 }
 
-/* Nav links (right) */
 .nav-right ul {
   list-style: none;
   display: flex;
@@ -70,17 +83,141 @@ nav a:hover {
 /* === INTRO TEXT === */
 .intro p {
   max-width: 900px;
-  margin: 60px 0 40px 40px;
+  margin: 40px 0 40px 40px;
   line-height: 1.6;
   font-size: 1.5rem;
   text-align: left;
 } 
 
+.now {
+  font-size: 1.4rem;
+  margin-left: 40px;;
+  margin-bottom: 10px;
+}
+.details {
+  font-size: 1.1rem;
+  margin-left: 40px;;
+}
+
+
 .name-big {
   display: block;
-  font-size: 3.0rem; /* adjust as needed */
+  font-size: 3.5rem;
   font-weight: 300;
   margin-bottom: 0px;
+  margin-left: 30px;
+}
+
+
+
+.scroll-animate {
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 95%;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  margin: 40px auto;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === SHARED CONTENT SECTION STYLES === */
+.content-section {
+  margin: 60px 40px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.content-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.content-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.content-image:hover {
+  transform: scale(1.03);
+}
+
+.content-details {
+  max-width: 700px;
+  margin-left: 30px;
+}
+
+.content-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.content-meta {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 3px;
+}
+
+.content-status {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.content-link {
+  font-size: 0.9rem;
+  color: #509aea;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.content-link:hover {
+  border-color: #509aea;
+}
+
+/* === SPECIFIC OVERRIDES === */
+/* Research section adjustments */
+.research {
+  max-width: 1000px;
+  margin: 60px 0 40px 40px;
+}
+
+.research .content-item {
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.research .content-details {
+  margin-left: 30px;
+}
+
+/* Project title styling */
+
+.projects .content-meta {
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* Author highlighting */
+.highlight-author {
+  font-weight: 900;
+  color: #11a33b;
 }
 
 /* === RESPONSIVE === */
@@ -94,110 +231,4 @@ nav a:hover {
     font-size: 1rem;
     text-align: center;
   }
-
-} 
-.see-work {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-top: 20px;
-  color: #509aea;
-  text-align: left;
-  margin-left: 40px;
-}
-
-.see-work a {
-  color: #509aea;
-  text-decoration: none;
-}
-
-.see-work a:hover {
-  text-decoration: underline;
-} 
-
-.scroll-animate {
-  border: none;
-  border-top: 1px solid #ccc;
-  width: 95%;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-  margin: 40px auto;
-}
-
-/* When in view, animate */
-.scroll-animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Research Section */
-.research {
-  max-width: 1000px;
-  margin: 60px 0 40px 40px; /* same as intro paragraph */
-}
-
-.research-item {
-  margin-bottom: 25px;
-}
-
-.paper-title {
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-bottom: 5px;
-}
-
-.paper-authors {
-  font-size: 0.95rem;
-  opacity: 0.8;
-  margin-bottom: 3px;
-}
-
-.highlight-author {
-  font-weight: 900; /* slightly bolder than normal */
-  color: #11a33b;   /* subtle deep blue accent */
-}
-
-
-.paper-status {
-  font-size: 0.9rem;
-  font-style: italic;
-  margin-bottom: 8px;
-}
-
-.paper-link {
-  font-size: 0.9rem;
-  color: #509aea;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.paper-link:hover {
-  border-color: #509aea;
-}
-
-.research-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  margin-bottom: 25px;
-}
-
-.paper-cover {
-  width: 100px; /* square size */
-  height: 100px;
-  object-fit: cover;
-  border-radius: 6px; /* just slightly rounded */
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
-}
-
-.paper-cover:hover {
-  transform: scale(1.03);
-}
-
-.section-title{
-  font-size: 1.9rem;
-  font-weight: 300;
-
 }
